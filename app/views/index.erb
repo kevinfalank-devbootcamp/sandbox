@@ -20,4 +20,44 @@
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
   </table>
+  <br><br>
+  <form action='/cool_url' method='get'>
+    first name: <input type='text' name='fred'>
+    <br>
+    <textarea cols="40" rows="5" name="myname">
+      Now we are inside the area - which is nice.
+    </textarea>
+    <br>
+    <input type="checkbox" name="option1" value="Milk"> Milk<br>
+    <input type="checkbox" name="option2" value="Butter" checked> Butter
+    <br>
+    <input type="submit" value="get fred">
+    <br><br>
+    <input type="text" name="post[title]">
+    <input type="text" name="post[price]">
+    <textarea name="post[description]"></textarea>
+
+  </form>
+
+
+  <form action='/cool_url' method='post'>
+    last name: <input type='text' name='wilma'>
+    <br>
+    <input type="radio" name="group1" value="Milk"> Milk<br>
+    <input type="radio" name="group1" value="Butter" checked> Butter<br>
+    <input type="radio" name="group1" value="Cheese"> Cheese
+    <br>
+    <input type="radio" name="group2" value="Water"> Water<br>
+    <input type="radio" name="group2" value="Beer"> Beer<br>
+    <input type="radio" name="group2" value="Wine" checked> Wine
+    <br>
+    <select name="mydropdown">
+      <option value="Milk">Fresh Milk</option>
+      <option value="Cheese">Old Cheese</option>
+      <option value="Bread">Hot Bread</option>
+    </select>
+    <br><br>
+    <input type="submit" value="post wilma">
+  </form>
+
 </div>
